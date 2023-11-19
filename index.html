@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Metadados da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para a folha de estilos -->
     <link rel="stylesheet" href="assets\stylesheet.css">
+    
+    <!-- Título da página -->
     <title>To Do List</title>
 </head>
 <body>
+    <!-- Seção principal do conteúdo -->
     <main>
+        <!-- Título da To-Do List -->
         <h1 id="titulo">To Do List</h1>
+        
+        <!-- Caixa de entrada de tarefas -->
         <div id="input-box">
+            <!-- Input para inserir novas tarefas -->
             <input type="text" name="" id="myTask" placeholder="Adicione sua tarefa!"></input>
+            
+            <!-- Botão para adicionar nova tarefa -->
             <button onclick="creatNewTask()">+</button>
         </div>
+        
+        <!-- Lista de tarefas -->
         <ul id="minha-lista"></ul>
     </main>
+    
+    <!-- Script JavaScript -->
     <script src="assets\script.js"></script>
 </body>
 </html>
