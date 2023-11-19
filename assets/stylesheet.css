@@ -1,13 +1,16 @@
+/* Importando a fonte Poppins do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-*{
+/* Configurações gerais para o documento */
+* {
     padding: 0;
     margin:  0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-:root{
+/* Definindo variáveis para cores e tamanhos */
+:root {
     --bg-background-color: #59d0e0c0;
     --btn-add-background-color: #7BDC4C;
     --btn-delete-background-color: #FF3F25;
@@ -19,24 +22,32 @@
     --task-sm-font-size: 20px;
 }
 
+/* Estilos gerais do corpo da página */
 body {
     background-color: var(--bg-background-color);
     color: var(--font-color);
 }
-main, #input-box, article{
+
+/* Estilos para as seções principais da página */
+main, #input-box, article {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-main{
+
+/* Estilos específicos para a seção principal */
+main {
     height: 100vh;
     flex-direction: column;
 }
-#input-box{
+
+/* Estilos para a caixa de entrada de tarefas */
+#input-box {
     flex-direction: row;
 }
 
-li{
+/* Estilos para os itens da lista de tarefas */
+li {
     display: inline-block;
     font-size: var(--task-font-size);
     background-color: var(--task-background-color);
@@ -44,21 +55,25 @@ li{
     margin-right: 2.5%;
     cursor: pointer;
 }
-#minha-lista{
+
+/* Estilos para a lista de tarefas com barra de rolagem personalizada */
+#minha-lista {
     height: fit-content;
     max-height: 50vh;
     overflow-y: auto;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 5px;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: var(--font-color);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: var(--task-background-color);
 }
-article{
+
+/* Estilos para os artigos que contêm as tarefas */
+article {
     width: 60vw;
     padding-bottom: 1%;
     flex-direction: row;
@@ -67,68 +82,76 @@ article{
 #titulo{
     font-size: var(--title-font-size);
 }
-#titulo, #input-box{
+
+/* Estilos para o título da página e a caixa de entrada */
+#titulo, #input-box {
     margin-bottom: 3%;
 }
 
+/* Estilos para entrada de texto, botões, tarefas e li's em geral */
 input::placeholder, input, li, button {
     font-size: var(--task-font-size);
 }
-input, button, li{
+input, button, li {
     padding: 2% 5%;
     border-radius: 25px;
     border: solid var(--font-color) 2px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-input{
+input {
     width: 50vw;
     margin-right: 2.5%;
     background-color: var(--task-background-color);
 }
-button{
+button {
     width: 10vw;
     font-weight: 700;
 }
-#input-box > button{
+
+/* Estilos específicos para o botão de adicionar */
+#input-box > button {
     background-color: var(--btn-add-background-color);
 }
-#input-box > button:hover{
+#input-box > button:hover {
     cursor: pointer;
     background-color: #5a9c39;
 }
-article > button{
+
+/* Estilos específicos para os botões de excluir */
+article > button {
     background-color: var(--btn-delete-background-color);
     margin-right: 1%;
 }
-article > button:hover{
+article > button:hover {
     cursor: pointer;
     background-color: #c71b05;
 }
 
+/* Estilos responsivos para telas menores (max-width: 700px) */
 @media (max-width: 700px) {
-    #titulo{
+    #titulo {
         font-size: var(--title-sm-font-size);
     }
-    li{
+    li {
         font-size: var(--task-sm-font-size);
         width: 80vw;
         margin-right: 1%;
     }
-    #minha-lista, #input-box, article{
+    #minha-lista, #input-box, article {
         width: 95vw;
     }
-    #minha-lista{
+    #minha-lista {
         overflow-x: hidden;
     }
-    input, button, li{
+    input, button, li {
         padding: 2% 5%;
         border-radius: 25px;
     }
-    input{
+    input {
         width: 77vw;
         margin-right: 1%;
     }
-    button{
+    button {
         width: 15vw;
         font-weight: 700;
     }
