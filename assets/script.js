@@ -4,12 +4,11 @@ function creatNewTask(){
     let newTask = document.createElement('li');
     let taskContainer = document.createElement('article');
     let myString = document.getElementById('myTask').value;
-    let myRegex = /[^A-Z0-9áàãâéêíóôõú\s]/gi; 
+    let myRegex = /[^A-Z0-9áàãâéêíóôõúç\s]/gi; 
     let securityTest = myRegex.test(myString);
-    console.log(securityTest);
-    newTask.textContent = document.getElementById('myTask').value;
 
     if(document.getElementById('myTask').value !== "" && securityTest == false){
+        newTask.textContent = document.getElementById('myTask').value;
         document.getElementById('myTask').value = "";
 
         let deleteBtn = document.createElement('button');
