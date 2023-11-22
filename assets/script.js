@@ -27,6 +27,7 @@ function creatNewTask() {
         list.appendChild(taskContainer);
         taskContainer.appendChild(newTask);
         taskContainer.appendChild(deleteBtn);
+        
 
         // Adicionar evento de clique à nova tarefa para alternar estilo
         newTask.addEventListener('click', () => {
@@ -45,3 +46,16 @@ function creatNewTask() {
         window.alert('INSIRA UM VALOR VÁLIDO');
     }
 }
+
+let taskInput = document.getElementById('myTask');
+let addTaskBtn = document.getElementById('addBtn');
+
+
+taskInput.addEventListener('keypress', (ev) => {
+    if(ev.key == 'Enter') {
+        creatNewTask()
+    }
+})
+addTaskBtn.addEventListener('click', () => {
+    creatNewTask();
+})
